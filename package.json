@@ -1,0 +1,25 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "Biblioteca do curso js com tdd na prática.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasrhs/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "library",
+    "es6",
+    "tdd"
+  ],
+  "author": "Douglas Santos <douglas-rhs@hotmail.com> (https://douglasrhs.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglasrhs/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/douglasrhs/js-tdd-course#readme"
+}
