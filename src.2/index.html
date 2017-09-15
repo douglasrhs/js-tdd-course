@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='utf-8'>
+  <title>Teste - TDD</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    h1{ 
+      text-align:center;
+      margin-top: 15%        
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <h1>Testes - TDD</h1>
+    <h3>02 - This no Arrow Function</h3>
+
+    <button id='btn'>Click Me!</button>
+
+  </section>
+</body>
+<script>
+  
+  const btn = document.getElementById('btn');
+  
+  // Aqui o this se refere ao btn, onde está ocorrendo o click
+  // Com arrow function no lugar dessa função não daria certo
+  // Pois o this iria se referir ao objeto window
+  // pois é o contexto em que ele está ocorrendo
+  btn.addEventListener('click', function(){
+    console.log(this);
+  });
+  
+
+</script>
+</html>
