@@ -1,21 +1,16 @@
-const ireland = ['Dublin', 'Galway', 'Cork'];
+const express = require('express');
 
-const love = ireland.map(function(name){
-  return `I love ${name}!`
-})
+const app = express();
 
-const loveArrow = ireland.map((name) => {
-  return `I love ${name}!`
-})
+const port = 3000;
 
-const loveArrowSingle = ireland.map(name => {
-  return `I love ${name}!`
-})
+const path = require('path');
 
-const loveArrowOneLine = ireland.map(name => `I love ${name}!`)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/index.html'));
+});
 
-const loveChain = ireland
-  .filter(name => name === 'Dublin')
-  .map(name => `I love ${name}!`)
+app.listen(port, () => {
+  console.log('Servidor rodando na porta 3000');
+});
 
-console.log(loveChain);

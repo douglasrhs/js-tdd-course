@@ -17,32 +17,33 @@
 <body>
   <section class="container">
     <h1>Testes - TDD</h1>
-    <h3>03 - This no Arrow Function</h3>
+    <h3>01 - Intro arrow function</h3>
 
-    <button id='btn'>Make my sandwich!</button>
 
   </section>
 </body>
 <script>
-  const sandwich = {
-    bread: 'white',
-    cheese: 'cheddar',
+  const ireland = ['Dublin', 'Galway', 'Cork'];
 
-    prepare: function(){
-      return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese`
-    },
+  const love = ireland.map(function(name){
+    return `I love ${name}!`
+  });
 
-    make: function() {
-      var that = this;
-      window.setTimeout(function(){
-        console.log(that.prepare());
-      }, 500);
-    }
-  }  
+  const loveArrow = ireland.map((name) => {
+    return `I love ${name}!`
+  });
 
-  const btn = document.getElementById('btn');
+  const loveArrowSingle = ireland.map(name => {
+    return `I love ${name}!`
+  });
 
-  btn.addEventListener('click', function() { sandwich.make()});  
+  const loveArrowOneLine = ireland.map(name => `I love ${name}!`);
+
+  const loveChain = ireland
+    .filter(name => name === 'Dublin')
+    .map(name => `I love ${name}!`);
+
+  console.log(loveChain);
 
 </script>
 </html>

@@ -1,16 +1,17 @@
-// ARROWS FUNCTIONS 
+const express = require('express');
 
-let express = require('express')
-let app = express()
-let port = 3000
-var path = require('path')
+const app = express();
+
+const port = 3000;
+
+const path = require('path');
+
+// const dirname = __dirname;
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/index.html'));
-})
+  res.sendFile(path.join(`${__dirname}/index.html`));
+});
 
 app.listen(port, () => {
-  console.log('Servidor rodando na porta 3000')
-})
-
-
+  console.log('Servidor rodando na porta 3000');
+});

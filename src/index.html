@@ -17,34 +17,10 @@
 <body>
   <section class="container">
     <h1>Testes - TDD</h1>
-    <h3>03 - This no Arrow Function</h3>
-
-    <button id='btn'>Make my sandwich!</button>
-
+    <h3>--</h3>
   </section>
 </body>
 <script>
-  const sandwich = {
-    bread: 'white',
-    cheese: 'cheddar',
-
-    prepare: function(){
-      return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese`
-    },
-
-    make: function() {
-      var that = this;
-      window.setTimeout(function(){
-        console.log(that.prepare())
-      }, 500)
-    }
-  }  
-
-  const btn = document.getElementById('btn')
-
-  btn.addEventListener('click', function() { sandwich.make()})
-
-  
 
 </script>
 </html>

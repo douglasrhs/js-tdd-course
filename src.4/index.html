@@ -17,32 +17,21 @@
 <body>
   <section class="container">
     <h1>Testes - TDD</h1>
-    <h3>03 - This no Arrow Function</h3>
+    <h3>04 - temporal dead zone</h3>
 
-    <button id='btn'>Make my sandwich!</button>
 
   </section>
 </body>
 <script>
-  const sandwich = {
-    bread: 'white',
-    cheese: 'cheddar',
+  console.log(cat);
+  console.log(dog);
 
-    prepare: function(){
-      return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese`
-    },
-
-    make: function() {
-      var that = this;
-      window.setTimeout(function(){
-        console.log(that.prepare());
-      }, 500);
-    }
-  }  
-
-  const btn = document.getElementById('btn');
-
-  btn.addEventListener('click', function() { sandwich.make()});  
+  var cat = 'meow';
+  // qndo criamos uma variavel com var, ela é declarada no começo do código
+  // assim qndo damos um console.log na variavel, ela retorna undefined, porqe ela só foi iniciada e nao foi atribuido nenhum valor
+  let dog = 'au';
+  // já o let é criado em ordem de execução
+  // entao ao chamar o console.log ele da um erro de referência, pq a variavel nao foi criada ainda
 
 </script>
 </html>
