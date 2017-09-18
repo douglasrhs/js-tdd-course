@@ -31,8 +31,13 @@
     'Molestias, officia, perspiciatis? Architecto, molestias autem.'+
     'Repellat, laborum deserunt soluta necessitatibus. Temetur illo, id'+
     'magnam numquam neque illum temporibus, in qui eos.',
-    tags: ['es6', 'js', 'template-literal']
+    tags: ['es6', 'js', 'template-literal'],
+    author: 'Douglas Santos'
   };
+
+  function renderAuthor(name){
+    return (name) ? name : 'unknow';
+  }
 
   const markup = `
     <article>
@@ -46,6 +51,7 @@
         <ul>
           ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
         </ul>
+        <p>Author: ${renderAuthor(article.author)}</p>
       </footer>
     </article>
   `;
