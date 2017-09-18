@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='utf-8'>
+  <title>Teste - TDD</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-top: 5%  
+    }
+    h1, h3{ 
+      text-align:center;
+            
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <h1>Testes - TDD</h1>
+    <h3>06 - Uses template literal for Html fragments</h3>
+    <br/>
+    <div id='code'></div>
+  </section>
+</body>
+<script>
+  const article = {
+    title: 'Aprendendo Template Strings',
+    intro: 'Uma breve explicação de como se utilizar template strings do ES6 em seu código hoje!',
+    body: 'Lorem ipsun dolor sit amet, consectetur adipisicing elit,'+
+    'Molestias, officia, perspiciatis? Architecto, molestias autem.'+
+    'Repellat, laborum deserunt soluta necessitatibus. Temetur illo, id'+
+    'magnam numquam neque illum temporibus, in qui eos.',
+    tags: ['es6', 'js', 'template-literal']
+  };
+
+  const markup = `
+    <article>
+      <header>
+        <h1>${article.title}</h1>
+      </header>
+      <section>
+        <p>${article.intro}</p>
+      </section>
+      <footer>
+        <ul>
+          ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+        </ul>
+      </footer>
+    </article>
+  `;
+  const code = document.getElementById('code');
+  code.innerHTML = markup;
+
+</script>
+</html>
