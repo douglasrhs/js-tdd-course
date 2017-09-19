@@ -2,7 +2,7 @@
   "name": "js-tdd-course",
   "version": "1.0.0",
   "description": "Biblioteca do curso js com tdd na prática.",
-  "main": "src/main.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepush": "npm run lint",

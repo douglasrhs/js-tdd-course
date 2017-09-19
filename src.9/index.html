@@ -9,7 +9,7 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin-top: 5%  
     }
-    h1, h2, h3, p{ 
+    h1, h2, h3{ 
       text-align:center;            
     }
     .green {
@@ -21,11 +21,22 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>14 -  </h3> 
-    
+    <h3>09 - Default Parameters</h3>
+    <div id='x'></div>
   </section>
 </body>
 <script>
- 
+  function helloConsole(name = 'Jones', lastName = 'Oliveira'){    
+    console.log(`Hello brou, i am ${name} ${lastName}! How are you?`);
+  };
+  function helloHtml(name = 'Jones', lastName = 'Oliveira'){    
+    return(`Hello brou, i am ${name} ${lastName}! How are you?`);
+  };
+
+  helloConsole();
+  helloConsole('Douglas');
+  helloConsole('Douglas','Santos');
+  document.getElementById('x').innerHTML = helloHtml('Douglas','Santos');
+
 </script>
 </html>

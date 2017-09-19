@@ -9,7 +9,7 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin-top: 5%  
     }
-    h1, h2, h3, p{ 
+    h1, h2, h3{ 
       text-align:center;            
     }
     .green {
@@ -21,11 +21,38 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>14 -  </h3> 
+    <h3>11 - Array.from e Array.of</h3>
     
+    <ul id="list">
+      <li>Willian</li>
+      <li>Jonas</li>
+      <li>Gabriel</li>
+    </ul>
+
   </section>
 </body>
 <script>
- 
+  // const text = 'Willian';
+  // console.log(Array.from(text));
+
+  // Array.from
+  const list = document.querySelectorAll('#list li');
+  const listArray = Array.from(list)
+  console.log(list); //NodeList
+  console.log(listArray); //Array
+
+  const names = listArray.map((name) => name.textContent);
+
+  console.log(names);
+
+
+  // Array.of
+  const array = Array.of(1,4,'Willian', {name: 'Jonas'});
+  console.log(array);
+
+
+
+
+  
 </script>
 </html>

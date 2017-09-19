@@ -9,7 +9,7 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin-top: 5%  
     }
-    h1, h2, h3, p{ 
+    h1, h2, h3{ 
       text-align:center;            
     }
     .green {
@@ -21,11 +21,36 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>14 -  </h3> 
-    
+    <h3>12 - Array.find e Array.findIndex - </h3> 
   </section>
 </body>
 <script>
- 
+  const data = [
+    {
+      name: 'Willian',
+      age: 25, 
+      city: 'Dublin'
+    },
+    {
+      name:'Jonas',
+      age: 22,
+      city: 'Cologne'
+    },
+    {
+      name: 'Willian',
+      age: 24,
+      city: 'Guaratinguetá'
+    }
+  ];
+
+  // const sampleArray = [4,-5,0,-1];
+  // const underZero = sampleArray.find(x => x < 0);
+  // const underZeroIndex = sampleArray.findIndex(x => x < 0);
+  // console.log(underZero);
+  // console.log(underZeroIndex);
+  
+  const will = data.find(person => person.name === 'Willian');
+  console.log(will);
+
 </script>
 </html>

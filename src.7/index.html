@@ -9,7 +9,7 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin-top: 5%  
     }
-    h1, h2, h3, p{ 
+    h1, h2, h3{ 
       text-align:center;            
     }
     .green {
@@ -21,11 +21,30 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>14 -  </h3> 
-    
+    <h3>07 - tagged template</h3>
+    <div id='x'></div>
   </section>
 </body>
 <script>
- 
+
+  const city = 'Dublin';
+  const something = 'Guinness';
+  const otherthing = 'Leprechaums';
+
+  function green(template, ...values){
+    return template.reduce((accumulator, part, i) => {
+      return `
+        ${accumulator}
+        <span class="green">${values[i-1].toUpperCase()}</span>
+        ${part}
+      `
+    })
+  }
+
+  const ireland = green`I live in ${city} the city of ${something} and ${otherthing}!`;
+  
+  document.getElementById('x').innerHTML = ireland;
+  
+
 </script>
 </html>
