@@ -17,12 +17,19 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>19 - Promises Intro</h3> 
+    <h3>17 - Spread using in function</h3> 
     
   </section>
 </body>
 <script>
-  
+  function makeSandwiche(bread, cheese, sauce){
+    console.log(`Your sandwich with ${bread} bread, ${cheese} cheese and ${sauce} is done!`);
+  }
+
+  const ingredients = ['white', 'cheddar', 'barbecue'];
+
+  makeSandwiche(...ingredients);
+ 
   
 </script>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='utf-8'>
+  <title>Teste - TDD</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-top: 5%  
+    }
+    h1, h2, h3, p{ 
+      text-align:center;            
+    }
+    .green {
+      color: green;
+      font-size: 22px
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <h2>Testes - TDD</h2>
+    <h3>14 - Destructuring Objects and Destructuring Array</h3> 
+    
+  </section>
+</body>
+<script>
+  var data = {
+    name: 'Willian',
+    surname: 'Justen',
+    age: 25,
+    blog: 'https://willianjusten.com.br',
+    social: {
+      twitter: '@willian_justen',
+      facebook: '/willianjusten'
+    }
+  };
+
+  const arr = ['Douglas','Santos',24,'Dgs'];
+  const [nome, sobrenome, age, nick] = arr;
+
+  console.log(nome);
+  console.log(sobrenome);
+  console.log(age);
+  console.log(nick);
+  // const name = data.name;
+  // const surname = data.surname;
+  // const twitter = data.social.twitter;
+  // console.log(name);
+  // console.log(surname);
+  // console.log(twitter);
+ 
+  const { name, surname} = data;
+
+  console.log(name);
+  console.log(surname);
+
+  const { facebook, twitter } = data.social;
+
+  console.log(facebook);
+  console.log(twitter);
+
+  const { facebook: fb } = data.social;
+
+  console.log(fb);
+
+  const { city = 'Guaratinguetá' } = data;
+  
+  console.log(city);
+  
+</script>
+</html>

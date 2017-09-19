@@ -12,16 +12,31 @@
     h1, h2, h3, p{ 
       text-align:center;            
     }
+    .green {
+      color: green;
+      font-size: 22px
+    }
   </style>
 </head>
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>19 - Promises Intro</h3> 
+    <h3>15 - Destructuring Swap Variables</h3> 
     
   </section>
 </body>
 <script>
+  let a = 42;
+  let b = 21;
+
+  console.log("A : ",a);
+  console.log("B : ",b);
+
+  [a, b] = [b, a];
+
+  console.log("A : ",a);
+  console.log("B : ",b);
+
   
   
 </script>

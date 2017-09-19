@@ -17,12 +17,26 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>19 - Promises Intro</h3> 
+    <h3>16 - Spread Operator Intro</h3> 
     
   </section>
 </body>
 <script>
-  
+  let front = ['react', 'vue', 'angular'];
+  let back = ['python', 'ruby', 'nodejs'];
+
+  // let fullStack = [];
+  // fullStack = fullStack.concat(front);
+  // fullStack.push('RxJS');
+  // fullStack = fullStack.concat(back);
+
+  let fullStack = [...front, 'RxJS', ...back];
+
+  console.log(fullStack);
+
+  console.log([...'douglas']);
+  console.log(back.push(...front));
+  console.log(back);
   
 </script>
 </html>
