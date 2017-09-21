@@ -17,13 +17,38 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>22 - </h3> 
-    <div id="x"></div>
+    <h3>19 - Promises Intro</h3> 
+    
   </section>
 </body>
 <script>
-  const x = document.getElementById('x');
+  // Promises
 
+  // Promises são promessas que irão acontecer
+  // E ai voc consegue utilizar os metodos then() caso deu certo a promise
+  // ou o método catch() caso tenha dado algum erro na promise
+
+
+  var defer = new Promise((resolve,reject) => {
+    setTimeout(() => {
+      if(true){
+        resolve('Hello, Promise it works!');
+      }else{
+        reject(`Error! Promise don't work`);
+      }
+    }, 1000);
+  });
+    
+
+  defer
+    .then((data) => {
+      console.log(data);
+      return 'xburg';
+    })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+
+  
   
 </script>
 </html>

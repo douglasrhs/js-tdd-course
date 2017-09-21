@@ -17,13 +17,27 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>22 - </h3> 
+    <h3>20 - Promises Real Examples</h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
-  const x = document.getElementById('x');
+  // Existem 3 status para as Promises
 
+  // pending - Quando ela está aguardando resolver a promise
+  // resolved - Quando ela terminou de resolver a promise
+  // rejected - Quando a promise foi rejeitada
+
+
+  var posts = fetch('https://willianjusten.com.br/search.json');
+  var x = document.getElementById('x');
+  
+  posts
+    .then(data => data.json())
+    .then(data => data.map(post => {
+      x.innerHTML += `${post.title} <strong>${post.date}</strong> - <a href='https://willianjusten.com.br${post.url}'>Clique aqui</a></br>`;
+    }))
+    .catch(err => console.error(err));
   
 </script>
 </html>
