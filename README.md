@@ -3,9 +3,9 @@ Biblioteca do curso de JS com TDD na prática.
 
 ## Módulo 01 - Boas práticas e Aprendendo ES6
 
-src.1 - Intro Arrow Function
-src.2 - This no Arrow Function
-src.3 - This Arrow Example
+- src.1 - Intro Arrow Function
+- src.2 - This no Arrow Function
+- src.3 - This Arrow Example
 src.4 - Temporal Dead Zone
 src.5 - Uses Template Literals
 src.6 - Uses Templates Literals for Html Fragments
