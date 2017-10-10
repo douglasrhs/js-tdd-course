@@ -17,12 +17,34 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>29 - Sets Intro</h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
+  let mySet = new Set(['willian', 'jonas', 'godoy']);
 
+  mySet.add('marcio');
+  mySet.add('João');
+  mySet.add('João');
+  mySet.add('João');
+  mySet.add('willian');
+  mySet.add('Willian');
+
+  mySet.delete('willian');
+
+  console.log(mySet.has('willian')); //false
+  console.log(mySet.has('marcio')); //true
+
+  console.log(mySet[1]); // undefined
+
+  let it = mySet.values();
+
+  console.log(it.next()); 
+
+  for(name of it){
+    console.log(name);
+  }
+  
 </script>
 </html>

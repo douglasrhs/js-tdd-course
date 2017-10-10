@@ -17,12 +17,34 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>25 - Iteratos & Iterables - for ... of </h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
 
+  // iterators
+  // iterable
+
+
+  var txt = 'Ireland'; // iterable
+  var it = txt[Symbol.iterator](); // iterator
+
+  console.log( it.next() );
+  console.log( it.next() );
+  console.log( it.next() );
+  console.log( it.next() );
+  console.log( it.next() );
+  console.log( it.next() );
+  console.log( it.next() );
+  console.log( it.next() );
+
+  for ( letter of txt ) {
+    console.log(letter);
+    if(letter === 'a') break;
+  }
+  
+  
+  
 </script>
 </html>

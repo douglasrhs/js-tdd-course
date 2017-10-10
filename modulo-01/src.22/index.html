@@ -17,12 +17,25 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>22 - Revisão Herança Prototipal </h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
+  // class
+  function Animal(kind, sound){
+    // constructor
+    this.kind = kind;
+    this.sound = sound;
+  }
 
+  Animal.prototype.hello = function(){
+    console.log(`${this.sound} I'm a ${this.kind}!`);
+  }
+
+  const dog = new Animal('dog', 'auau');
+  const cat = new Animal('cat', 'meow');
+
+  
 </script>
 </html>

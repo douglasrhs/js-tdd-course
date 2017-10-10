@@ -17,12 +17,28 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>26 - Generators Intro </h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
+  function* genNames(){
+    console.log('primeiro nome: ');
+    yield 'Willian';
+    console.log('segundo nome: ');
+    yield 'Douglas';
+    console.log('terceiro nome: ');
+    yield 'Gabriel';
+  }
 
+  const names = genNames();
+
+  console.log(names.next());
+  console.log(names.next().value);
+  console.log(names.next().value);
+  console.log(names.next().value);
+
+  
+  
 </script>
 </html>

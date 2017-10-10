@@ -17,12 +17,25 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>30 - Weakset Intro</h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
+  // Weakset -> é similar ao Set, ele só recebe objetos e não tipos primitivos e ele não permite iteração.
+  // serve mais pro caso de voce quiser guardar objetos únicos e somente objetos.
 
+  let obj1 = {
+    name: 'Douglas',
+    age: 23
+  };
+
+  let obj2 = {
+    name: 'Willian',
+    age: 25
+  };
+
+  let ws = new WeakSet([obj1, obj2]); //weakset só aceita objetos
+  
 </script>
 </html>

@@ -17,12 +17,28 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>28 - Intro Proxy</h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
 
+  // Proxy é uma forma de definir comportamentos diferentes pra métodos dentro de um obj.
+  let obj = {
+    name: 'Willian',
+    age: 25
+  };
+
+  let proxy = new Proxy(obj, {
+    get(target, name){
+      console.log('Alguém está pedindo seu nome :D');
+      return target.name;
+    },
+    set(target, name, value){
+      console.log('Alguém está mudando o nome');
+      target.name = value.toUpperCase();
+    }
+  })
+  
 </script>
 </html>

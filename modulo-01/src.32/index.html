@@ -17,12 +17,28 @@
 <body>
   <section class="container">
     <h2>Testes - TDD</h2>
-    <h3>00</h3> 
+    <h3>32 - Weakmaps Intro</h3> 
     <div id="x"></div>
   </section>
 </body>
 <script>
- 
+  // Weakmap -> weakset e só aceita objetos
+  // vantagem do weak é que são definições fracas. O que é isso?
+  // é que ao excluir um obj do escopo, o garbage collector vai limpar as referências ao objeto dentro do wm. 
+  let obj1 = {
+    name: 'Douglas',
+    age: 23
+  };
+
+  let obj2 = {
+    name: 'Willian',
+    age: 25
+  };
+
+  let wm = new WeakMap();
+
+  wm.set(obj1, 'Info do Douglas');
+  wm.set(obj2, 'Info do Willian');
 
 </script>
 </html>
